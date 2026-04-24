@@ -1,0 +1,21 @@
+set dotenv-load
+
+_default:
+    just --list
+
+# this help message (default target)
+help:
+    just --list
+
+# lint all .yaml / .yml files
+yamllint:
+    yamllint .
+
+# run python linter
+flake8:
+    flake8
+
+# yamllint, flake8 in one target
+pre-commit:
+    @just yamllint
+    @just flake8

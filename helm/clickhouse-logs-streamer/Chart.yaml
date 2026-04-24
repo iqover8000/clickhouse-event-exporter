@@ -1,0 +1,8 @@
+---
+
+apiVersion: "v2"
+name: "clickhouse-logs-streamer"
+description: "Stream ClickHouse Cloud logs to stdout"
+version: "0.1.0"
+appVersion: "0.1.0"
+type: "application"

@@ -1,0 +1,43 @@
+---
+
+yaml-files:
+  - "*.yaml"
+  - "*.yml"
+  - "*.yaml.j2"
+  - "*.yml.j2"
+  - "*.yaml.example"
+  - "*.yml.example"
+  - ".yamllint"
+
+ignore:
+  - "helm/*/templates"
+
+rules:
+  braces: "enable"
+  brackets:
+    forbid: "non-empty"
+  colons: "enable"
+  commas: "disable"
+  comments: "enable"
+  comments-indentation: "enable"
+  document-end: "disable"
+  document-start: "enable"
+  empty-lines: "enable"
+  empty-values: "disable"
+  hyphens: "enable"
+  indentation: "enable"
+  key-duplicates: "enable"
+  key-ordering: "disable"
+  line-length:
+    max: 180
+  new-line-at-end-of-file: "enable"
+  new-lines: "enable"
+  octal-values: "enable"
+  quoted-strings:
+    quote-type: "double"
+  trailing-spaces: "enable"
+  truthy:
+    allowed-values:
+      - "true"
+      - "false"
+    check-keys: false

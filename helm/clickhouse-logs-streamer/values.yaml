@@ -1,0 +1,31 @@
+---
+
+image:
+  repository: "ghcr.io/iqover8000/clickhouse-logs-streamer"
+  tag: "v0.1.0"
+  pullPolicy: "IfNotPresent"
+
+podAnnotations: {}
+
+env:
+  CH_HOST: ""
+  CH_PORT: "8443"
+  CH_USER: "default"
+  CH_PASSWORD: ""
+  CH_DATABASE: "default"
+  CH_SECURE: "true"
+  CH_VERIFY: "true"
+  CH_LOG_TABLE: "system.text_log"
+  CH_LOG_TIMESTAMP_COLUMN: "event_time_microseconds"
+  CH_LOG_SEVERITY_COLUMN: "level"
+  CH_LOG_MESSAGE_COLUMN: "message"
+  LOG_SEVERITY: "error"
+  LOG_OUTPUT_FORMAT: "json"
+  CH_OFFSET_TABLE: "default.logs_streamer_offsets"
+  STREAMER_ID: "default-streamer"
+  POLL_INTERVAL_SECONDS: "10"
+  BATCH_SIZE: "1000"
+  HEALTH_STALE_SECONDS: "30"
+  LOOKBACK_MAX_SECONDS: "3600"
+  FLASK_HOST: "0.0.0.0"
+  FLASK_PORT: "8080"
