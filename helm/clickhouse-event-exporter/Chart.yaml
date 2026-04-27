@@ -1,0 +1,8 @@
+---
+
+apiVersion: "v2"
+name: "clickhouse-event-exporter"
+description: "Stream ClickHouse Cloud logs to stdout"
+version: "0.1.1"
+appVersion: "0.1.1"
+type: "application"
